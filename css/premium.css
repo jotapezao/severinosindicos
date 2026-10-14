@@ -477,3 +477,178 @@ body::after {
   radial-gradient(circle at 100% 100%, rgba(47,181,163,0.06), transparent 45%),
   radial-gradient(rgba(17,30,58,0.06) 1px, transparent 1px) 0 0 / 26px 26px, #FBF8F2; }
 ::selection { background: var(--gold); color: #0A1226; }
+
+/* ==========================================================================
+   MOBILE — RESPONSIVIDADE REFINADA (tablet ≤1080 · celular ≤640 · compacto ≤380)
+   ========================================================================== */
+html { -webkit-tap-highlight-color: transparent; }
+img, video, iframe { max-width: 100%; }
+
+@media (max-width: 1080px) {
+  /* Menu em tela cheia: premium.css deixava o fundo transparente */
+  .nav {
+    background: radial-gradient(circle at 80% 10%, rgba(201,165,78,0.14), transparent 50%), #0A1226;
+    border: 0; padding: 6rem 1.5rem 3rem; overflow-y: auto; gap: 0.2rem;
+  }
+  .nav a { width: 100%; padding: 0.7rem 1rem; }
+  .nav a.nav__highlight { background: none; border: 0; color: var(--gold-2); }
+  .burger { width: 48px; height: 48px; }
+  .burger span { left: 12px; right: 12px; }
+  .header__inner { padding: 0 0.6rem 0 1rem; }
+  .header::before { inset: 0.5rem 0.7rem; }
+
+  .section { padding: clamp(4rem, 12vw, 6rem) 0; }
+  .section-head { margin-bottom: 3rem; }
+  .manifesto, .method, .founder, .proposal, .faq-wrap { gap: 3rem; }
+  .founder__media, .method__media { max-width: 520px; margin: 0 auto; width: 100%; }
+  .services { grid-template-columns: repeat(2, 1fr); }
+  .video-card__caption { margin: -1.6rem 1rem 0; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 1.15rem; }
+  body { font-size: 15.5px; }
+
+  /* Desempenho: efeitos pesados desligados no celular */
+  body::after { display: none; }
+  .hero::before, .hero::after { filter: blur(60px); width: 380px; height: 380px; animation-duration: 28s; }
+  .trust-pill, .hero__facts, .service, .quote, .nav, .video-card__caption, .founder__badge {
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  .btn--gold { animation: none; }
+  .simulator-card, .wizard, .compare__col--pro, .video-card__frame { animation-duration: 16s; }
+
+  /* Header */
+  .header { padding: 0.5rem 0; }
+  .header__logo img { height: 40px; }
+
+  /* Hero */
+  .hero { min-height: auto; }
+  .hero__content { padding-top: 7.2rem; padding-bottom: 2rem; }
+  .hero__badge-pill { font-size: 0.64rem; letter-spacing: 0.08em; padding: 0.45rem 0.85rem; line-height: 1.35; }
+  .hero__title { font-size: clamp(2.35rem, 11.5vw, 3rem); line-height: 1.06; margin-bottom: 1.2rem; }
+  .hero__sub { font-size: 1rem; margin-bottom: 1.8rem; }
+  .hero__actions { gap: 0.7rem; margin-bottom: 2rem; }
+  .btn { padding: 1rem 1.4rem; min-height: 50px; white-space: normal; text-align: center; letter-spacing: 0.1em; font-size: 0.74rem; }
+  .trust-pill { padding: 0.8rem 1rem; }
+  .hero__facts-wrap { padding: 0; }
+  .hero__facts { grid-template-columns: 1fr 1fr; margin: 0 0 1.4rem; border-radius: 18px; padding: 0.4rem 0.9rem; }
+  .fact { flex-direction: column; align-items: flex-start; gap: 0.6rem; padding: 1.1rem 0.4rem; border-right: 0; }
+  .fact + .fact, .fact:nth-child(3) { padding-left: 0.4rem; }
+  .fact:nth-child(even) { border-left: 1px solid var(--line-light); padding-left: 1rem; }
+  .fact:nth-child(n+3) { border-top: 1px solid var(--line-light); }
+  .fact__icon { width: 40px; height: 40px; }
+  .fact__value { font-size: 1.55rem; }
+  .fact__label { font-size: 0.72rem; line-height: 1.35; }
+
+  /* Faixa / manifesto */
+  .marquee { padding: 1.1rem 0; }
+  .manifesto__highlight-box { padding: 1.2rem; gap: 1rem; }
+  .highlight-number { font-size: 2.8rem; }
+  .manifesto__sign { flex-direction: column; align-items: flex-start; }
+
+  /* Títulos */
+  .h2 { font-size: clamp(2rem, 9vw, 2.5rem); margin: 1rem 0 1.1rem; }
+  .lead { font-size: 1rem; }
+  .eyebrow { font-size: 0.66rem; letter-spacing: 0.18em; }
+  .section-head, .section-head--center { margin-bottom: 2.4rem; }
+
+  /* Vídeo */
+  .video-card::before { inset: 4% 0 0; filter: blur(30px); }
+  .video-card__frame { border-radius: 16px; }
+  .video-card__live { top: 0.7rem; left: 0.7rem; font-size: 0.6rem; padding: 0.35rem 0.7rem; }
+  .video-card__sound { right: 0.7rem; bottom: 0.7rem; padding: 0.4rem 0.9rem 0.4rem 0.4rem; gap: 0.6rem; }
+  .video-card__sound-icon { width: 38px; height: 38px; }
+  .video-card__sound-text b { font-size: 0.74rem; }
+  .video-card__caption { margin: 0.9rem 0 0; padding: 1.2rem; border-radius: 16px; }
+  .video-card__caption strong { font-size: 1.3rem; }
+  .video-card__caption p { font-size: 0.86rem; }
+
+  /* Simulador */
+  .simulator-card { padding: 1.4rem 1.1rem; border-radius: 20px; }
+  .sim-group { margin-bottom: 1.8rem; }
+  .sim-group__head { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .sim-slider { height: 10px; }
+  .sim-slider::-webkit-slider-thumb { width: 30px; height: 30px; }
+  .sim-slider::-moz-range-thumb { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; background: var(--gold); }
+  .sim-chip { padding: 0.9rem; min-height: 54px; }
+  .sim-results { padding: 1.3rem 1.1rem; }
+  .sim-results__header { flex-wrap: wrap; gap: 0.5rem; }
+  .sim-metrics-subgrid { grid-template-columns: 1fr 1fr; }
+  .sim-metric-card { padding: 1.2rem 0.8rem; }
+
+  /* Serviços */
+  .services { grid-template-columns: 1fr; gap: 1rem; }
+  .service { padding: 1.7rem 1.4rem; }
+  .service__top { margin-bottom: 1.2rem; }
+  .service__title { font-size: 1.45rem; }
+  .service__toggle { min-height: 44px; }
+
+  /* Método */
+  .method__media .tag { position: static; max-width: none; margin-top: 1rem; animation: none; }
+  .steps::before { left: 21px; }
+  .step { grid-template-columns: 44px 1fr; gap: 1rem; }
+  .step__num { width: 44px; height: 44px; font-size: 1rem; }
+  .step h3 { font-size: 1.25rem; }
+
+  /* Comparativo */
+  .compare { gap: 1.2rem; }
+  .compare__col--pro { transform: none; }
+  .compare__head { font-size: 1.7rem; }
+  .compare__list li { font-size: 0.92rem; }
+
+  /* Fundador */
+  .founder__frame-decor { inset: 0.8rem -0.5rem -0.8rem 0.8rem; }
+  .founder__badge { left: 0.7rem; right: 0.7rem; bottom: 0.7rem; padding: 0.75rem 0.9rem; }
+  .founder__badge-star { width: 38px; height: 38px; }
+  .founder__badge strong { font-size: 1.02rem; }
+  .founder__quote { padding: 1.2rem 1.2rem; }
+  .founder__cta .btn { width: 100%; }
+
+  /* Condomínios, depoimentos, FAQ */
+  .condo { padding: 1.5rem 0; }
+  .condo:hover { padding: 1.5rem 0.6rem; }
+  .condo__name { font-size: 1.5rem; }
+  .quote { padding: 2rem 1.5rem; }
+  .quote__text { font-size: 1.2rem; }
+  .faq__item { padding: 0 0.8rem; }
+  .faq__q { font-size: 1.15rem; padding: 1.3rem 0; gap: 1rem; min-height: 56px; }
+
+  /* Proposta / wizard */
+  .wizard { padding: 1.6rem 1.1rem; border-radius: 20px; }
+  .wizard__title { font-size: 1.65rem; margin-bottom: 1.4rem; }
+  .choice { padding: 1.05rem 1.1rem; min-height: 56px; }
+  .field input, .field select { font-size: 16px; min-height: 50px; } /* evita zoom automático no iOS */
+  .wizard__nav { flex-wrap: wrap; }
+  .wizard__nav .btn { flex: 1 1 100%; }
+  .proposal__contacts a, .proposal__contacts p { font-size: 0.95rem; word-break: break-word; }
+
+  /* CTA, rodapé */
+  .cta-band .display { font-size: clamp(2.1rem, 9.5vw, 2.8rem); }
+  .cta-band__actions .btn { width: 100%; }
+  .footer { padding: 3.5rem 0 5.5rem; }
+  .footer__bottom { flex-direction: column; gap: 0.5rem; }
+
+  /* WhatsApp flutuante respeita a barra do iPhone */
+  .wa-concierge { right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom)); }
+  .wa-float { width: 56px; height: 56px; }
+  .wa-float__tip { display: none; }
+  .wa-concierge__card { width: calc(100vw - 2rem); right: 0; bottom: 70px; }
+  .toast { width: calc(100vw - 2rem); text-align: center; bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 380px) {
+  .hero__title { font-size: 2.15rem; }
+  .sim-metrics-subgrid, .hero__facts { grid-template-columns: 1fr; }
+  .fact:nth-child(even) { border-left: 0; padding-left: 0.4rem; }
+  .fact:nth-child(n+2) { border-top: 1px solid var(--line-light); }
+  .video-card__sound-text { display: none; }
+  .video-card__sound { padding: 0.4rem; }
+}
+
+/* Telas baixas na horizontal */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { min-height: auto; }
+  .hero__content { padding-top: 6rem; }
+  .nav { justify-content: flex-start; }
+}
