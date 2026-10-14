@@ -43,19 +43,19 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Security: block path traversal and hidden files
-  if (pathname.includes('..') || pathname.startsWith('/.git') || pathname.startsWith('/node_modules')) {
-    res.writeHead(403, { 'Content-Type': 'text/plain' });
-    res.end('403 Forbidden');
-    return;
-  }
-
   // Default to index.html
   if (pathname === '/' || pathname === '') {
     pathname = '/index.html';
   }
 
-  let filePath = path.join(PUBLIC_DIR, pathname);
+  let filePath = path.resolve(PUBLIC_DIR, '.' + pathname);
+
+  // Security: block path traversal outside PUBLIC_DIR and hidden files
+  if (!filePath.startsWith(PUBLIC_DIR) || pathname.startsWith('/.git') || pathname.startsWith('/node_modules')) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('403 Forbidden');
+    return;
+  }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
