@@ -1079,6 +1079,25 @@ body.is-loaded .split .w > span { transform: none; }
 .toast.is-visible { transform: translate(-50%, 0); }
 
 /* ==========================================================================
+   VÍDEO INSTITUCIONAL BASE
+   ========================================================================== */
+.video-sec { padding: 5rem 0; position: relative; }
+.video-card { max-width: 1040px; margin: 0 auto; position: relative; }
+.video-card__frame { position: relative; aspect-ratio: 16 / 9; width: 100%; border-radius: 24px; overflow: hidden; background: #000; }
+.video-card__player-wrap,
+.video-card__player,
+.video-card__player iframe,
+#yt-player,
+iframe#yt-player,
+.video-card__frame iframe {
+  position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; border: 0 !important;
+}
+.video-card__sound-icon svg { width: 20px !important; height: 20px !important; display: block; }
+.video-card__sound .ico-on { display: none; }
+.video-card__sound.is-on .ico-off { display: none; }
+.video-card__sound.is-on .ico-on { display: block; }
+
+/* ==========================================================================
    BREAKPOINTS & RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 1260px) {
