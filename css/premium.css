@@ -196,28 +196,35 @@ body::after {
   box-shadow: 0 22px 50px -15px rgba(0,0,0,0.9), 0 0 30px rgba(224, 140, 56, 0.2) !important;
   transform: translateY(-5px);
 }
+.service__top {
+  display: flex !important; justify-content: space-between !important; align-items: center !important;
+  margin-bottom: 1.2rem !important;
+}
 .service__title {
-  color: #FFFFFF !important; font-weight: 600; font-size: 1.62rem !important; line-height: 1.22;
+  color: #FFFFFF !important; font-weight: 600; font-size: 1.45rem !important; line-height: 1.25;
+  margin-bottom: 0.8rem !important;
   text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 .service__text {
-  color: #D8CFCA !important; font-size: 0.95rem; line-height: 1.65;
+  color: #D8CFCA !important; font-size: 0.93rem; line-height: 1.6; margin-bottom: 1.4rem;
 }
 .service__num {
-  position: absolute; right: 1.2rem; top: 3.4rem; font-size: 5.2rem; font-weight: 700; line-height: 1;
-  color: transparent !important; -webkit-text-stroke: 1.5px rgba(224, 168, 92, 0.32) !important; pointer-events: none;
-  transition: -webkit-text-stroke-color 0.4s, transform 0.5s var(--ease);
+  position: static !important; font-family: var(--serif) !important;
+  font-size: 1.4rem !important; font-weight: 600 !important; line-height: 1 !important;
+  color: #E0A85C !important; -webkit-text-stroke: 0 !important; pointer-events: none;
+  opacity: 0.88; transition: color 0.3s var(--ease);
 }
-.service:hover .service__num { -webkit-text-stroke-color: rgba(228, 164, 84, 0.7) !important; transform: translateY(-6px) scale(1.06); }
+.service:hover .service__num { color: #FFFFFF !important; -webkit-text-stroke: 0 !important; transform: none !important; }
 .service__icon-wrap {
-  border-radius: 16px; width: 58px; height: 58px;
+  border-radius: 16px; width: 54px; height: 54px;
   background: rgba(224, 168, 92, 0.14) !important; border: 1px solid rgba(224, 168, 92, 0.32) !important;
   color: #F5DFC0 !important; box-shadow: 0 10px 24px -10px rgba(224, 140, 56, 0.4);
+  margin-bottom: 1.2rem !important;
 }
-.service:hover .service__icon-wrap { transform: rotate(-6deg) scale(1.08); background: var(--grad-gold) !important; color: #090807 !important; border-color: transparent !important; }
+.service:hover .service__icon-wrap { transform: rotate(-4deg) scale(1.05); background: var(--grad-gold) !important; color: #090807 !important; border-color: transparent !important; }
 .service__tag {
   background: rgba(224, 168, 92, 0.14) !important; border: 1px solid rgba(224, 168, 92, 0.32) !important; color: #F5DFC0 !important;
-  font-weight: 700; letter-spacing: 0.14em;
+  font-weight: 700; letter-spacing: 0.12em; font-size: 0.7rem; padding: 0.3rem 0.75rem; border-radius: 999px;
 }
 .service__details {
   border-top: 1px dashed rgba(224, 168, 92, 0.25) !important;
@@ -228,8 +235,6 @@ body::after {
   color: var(--gold-2) !important; border-top: 1px solid rgba(224, 168, 92, 0.22) !important;
   font-weight: 700; letter-spacing: 0.12em;
 }
-.service:nth-child(1), .service:nth-child(6) { grid-column: span 2; }
-.service:nth-child(1) .service__title, .service:nth-child(6) .service__title { font-size: 2rem !important; }
 
 /* ---------- Método: timeline com linha luminosa ---------- */
 .steps { position: relative; }
@@ -287,7 +292,13 @@ body::after {
 /* ---------- Fundador ---------- */
 .founder__media img { border-radius: 28px; box-shadow: 0 40px 80px -30px rgba(0,0,0,0.8); }
 .founder__frame-decor { border-radius: 28px; }
-.founder__badge { border-radius: 20px; backdrop-filter: blur(16px); background: rgba(18, 14, 11, 0.95) !important; border: 1px solid rgba(224, 168, 92, 0.32) !important; animation: floaty 6s ease-in-out infinite; }
+.founder__badge {
+  border-radius: 20px; backdrop-filter: blur(16px);
+  background: rgba(18, 14, 11, 0.95) !important;
+  border: 1px solid rgba(224, 168, 92, 0.32) !important;
+  top: auto !important; bottom: 1.2rem !important; right: 1.2rem !important; left: 1.2rem !important;
+  animation: none !important;
+}
 .founder__badge strong { color: #FFFFFF !important; }
 .founder__badge span:not(.founder__badge-star) { color: #D8CFCA !important; }
 .founder__quote {
@@ -860,15 +871,14 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .hero__sub { max-width: 34ch; }
   .manifesto__sign strong { font-size: 1.25rem; }
   .manifesto__logo-badge { padding: 0.5rem 1rem; }
-  .founder__media, .method__media { max-width: 100%; }
   .video-card__caption-body strong { font-size: 1.25rem; }
   .footer__grid > div { padding-bottom: 0.5rem; }
 }
 
 /* 6) Cabeçalho mobile */
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .header__nav { display: contents; }
-  .header__inner { grid-template-columns: 1fr auto; align-items: center; }
+  .header__inner { display: flex; justify-content: space-between; align-items: center; }
   .header__cta { align-self: center; }
 }
 
@@ -878,17 +888,21 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   background-size: 220% 100%;
 }
 
-/* 8) Cabeçalho desktop: logo sumia e o botão estourava a tela em 1440px */
-@media (min-width: 1081px) {
-  .header__inner { grid-template-columns: auto 1fr auto; gap: 1.2rem; max-width: 1360px; }
-  .header__nav { justify-self: center; min-width: 0; }
-  .header__logo img { height: 46px; }
+/* 8) Cabeçalho desktop refinado: logo garantido, espaçamento harmônico */
+@media (min-width: 1181px) {
+  .header__inner {
+    display: flex; justify-content: space-between; align-items: center; gap: 1.2rem;
+    max-width: 1380px; margin: 0 auto;
+  }
+  .header__logo { flex-shrink: 0; min-width: 160px; }
+  .header__logo img { height: 46px; width: auto; object-fit: contain; }
   .header.is-scrolled .header__logo img { height: 40px; }
-  .nav { padding: 0.25rem; gap: 0; }
+  .header__nav { flex: 1 1 auto; display: flex; justify-content: center; }
+  .nav { padding: 0.25rem 0.4rem; gap: 0; }
   .nav a { padding: 0.55rem 0.8rem; font-size: 0.7rem; letter-spacing: 0.07em; }
   .nav .nav__pill { top: 0.25rem; bottom: 0.25rem; }
   .nav__mobile-cta { display: none !important; }
-  .header__cta { gap: 0.9rem; }
-  .btn--header { padding: 0.75rem 1.2rem; font-size: 0.68rem; letter-spacing: 0.12em; }
+  .header__cta { flex-shrink: 0; display: flex; align-items: center; gap: 0.9rem; }
+  .btn--header { padding: 0.75rem 1.25rem; font-size: 0.7rem; letter-spacing: 0.1em; }
 }
-@media (min-width: 1081px) and (max-width: 1500px) { .header__phone { display: none; } }
+@media (min-width: 1181px) and (max-width: 1400px) { .header__phone { display: none; } }

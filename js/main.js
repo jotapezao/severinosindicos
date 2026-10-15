@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
   };
 
-  const minDelay = reduceMotion ? 0 : 400; // Carregamento ágil sem espera desnecessária
+  const minDelay = reduceMotion ? 0 : 1600; // Apresentação de boas-vindas sofisticada (+1.2s)
   const t0 = performance.now();
   window.addEventListener('load', () => {
     setTimeout(start, Math.max(0, minDelay - (performance.now() - t0)));
   });
-  setTimeout(start, 2200); // Failsafe
+  setTimeout(start, 3600); // Failsafe seguro
 })();
 
 /* ---------- Cabeçalho: Efeito ao rolar e esconde/mostra inteligente ---------- */
