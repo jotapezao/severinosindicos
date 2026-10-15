@@ -4,47 +4,47 @@
    ========================================================================== */
 
 :root {
-  /* Paleta Nobre — Baseada no Logo Severino (Preto Obsidiana + Ouro & Cobre Metálico) */
-  --ink: #050608;               /* Preto obsidiana absoluto */
-  --ink-2: #0A0D14;             /* Superfície escura primária */
-  --ink-3: #111522;             /* Superfície elevada / cartões interativos */
-  --ink-card: rgba(14, 18, 28, 0.78);
-  --ink-glass: rgba(7, 9, 15, 0.88);
+  /* Paleta Nobre — Baseada no Banner e Logo Severino (Preto Café/Espresso + Ouro, Champanhe e Âmbar Sunset) */
+  --ink: #090807;               /* Preto café/noir quente profundo */
+  --ink-2: #120E0B;             /* Superfície espresso primária */
+  --ink-3: #18130F;             /* Superfície quente elevada */
+  --ink-card: rgba(24, 19, 15, 0.88);
+  --ink-glass: rgba(14, 11, 9, 0.92);
 
-  /* Superfícies escuras luxuosas (substituem marfim) */
-  --ivory: #0E1320;             /* Fundo nobre escuro */
-  --ivory-2: #141926;           /* Superfície secundária */
-  --ivory-card: #0F1422;        /* Cartão escuro elevado */
-  --paper: #050608;             /* Fundo mestre da página */
+  /* Superfícies quentes e nobres */
+  --ivory: #15110D;             /* Fundo nobre escuro quente */
+  --ivory-2: #1C1612;           /* Superfície secundária */
+  --ivory-card: #201914;        /* Cartão escuro elevado */
+  --paper: #090807;             /* Fundo mestre da página */
 
-  /* Ouro & Cobre Metálico do Logo */
+  /* Ouro, Champanhe & Cobre/Âmbar Sunset do Logo */
   --gold: #D4A360;              /* Ouro nobre do monograma */
   --gold-2: #F5DFC0;            /* Ouro champanhe brilhante / highlights */
-  --gold-3: #E28D44;            /* Cobre/âmbar quente da tipografia */
-  --gold-glow: rgba(212, 163, 96, 0.35);
-  --gold-subtle: rgba(212, 163, 96, 0.12);
-  --copper: #D4823A;            /* Cobre metálico */
-  --copper-glow: rgba(226, 141, 68, 0.3);
+  --gold-3: #E08C38;            /* Âmbar do pôr do sol */
+  --gold-glow: rgba(224, 140, 56, 0.35);
+  --gold-subtle: rgba(212, 163, 96, 0.14);
+  --copper: #B86828;            /* Bronze/cobre nobre */
+  --copper-glow: rgba(184, 104, 40, 0.35);
 
-  /* Tipografia Clara de Alta Legibilidade */
-  --text: #F7F8FA;              /* Texto principal claro e nítido */
-  --text-dark: #F7F8FA;
-  --muted: #9AA5B8;             /* Texto secundário elegante */
-  --muted-light: #727E94;       /* Texto terciário */
+  /* Tipografia Clara e Harmônica */
+  --text: #FAF6F2;              /* Branco pérola brilhante e nítido */
+  --text-dark: #FAF6F2;
+  --muted: #D8CFCA;             /* Texto secundário pérola quente, ultra legível */
+  --muted-light: #A89F98;       /* Texto terciário */
 
-  /* Linhas e Contornos Sutis */
+  /* Linhas e Contornos */
   --line: rgba(255, 255, 255, 0.08);
   --line-light: rgba(255, 255, 255, 0.12);
-  --line-gold: rgba(212, 163, 96, 0.25);
+  --line-gold: rgba(224, 168, 92, 0.28);
 
   --whatsapp: #25D366;
   --whatsapp-hover: #20BA5A;
 
   /* Gradientes Nobres */
-  --grad-gold: linear-gradient(135deg, #FFF1DE 0%, #E8B475 32%, #D48E48 68%, #A86728 100%);
-  --grad-gold-soft: linear-gradient(135deg, rgba(245, 223, 192, 0.14) 0%, rgba(212, 163, 96, 0.04) 100%);
-  --grad-hero-overlay: linear-gradient(180deg, rgba(5,6,8,0.85) 0%, rgba(5,6,8,0.45) 40%, rgba(5,6,8,0.92) 80%, #050608 100%);
-  --grad-card-glow: radial-gradient(circle at 50% 0%, rgba(212, 163, 96, 0.2) 0%, transparent 70%);
+  --grad-gold: linear-gradient(135deg, #FFF6EA 0%, #F5DFC0 26%, #D4A360 62%, #B86828 100%);
+  --grad-gold-soft: linear-gradient(135deg, rgba(245, 223, 192, 0.15) 0%, rgba(224, 140, 56, 0.05) 100%);
+  --grad-hero-overlay: linear-gradient(180deg, rgba(9,8,7,0.85) 0%, rgba(9,8,7,0.45) 40%, rgba(9,8,7,0.95) 80%, #090807 100%);
+  --grad-card-glow: radial-gradient(circle at 50% 0%, rgba(224, 140, 56, 0.22) 0%, transparent 70%);
 
   /* Tipografia */
   --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
@@ -60,9 +60,9 @@
 
   /* Sombras Ultra-Luxo */
   --shadow-sm: 0 4px 14px rgba(0,0,0,0.4);
-  --shadow-md: 0 14px 34px -8px rgba(0,0,0,0.6);
-  --shadow-luxury: 0 24px 50px -12px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(212, 163, 96, 0.2);
-  --shadow-gold: 0 12px 32px -8px rgba(212, 163, 96, 0.5);
+  --shadow-md: 0 14px 34px -8px rgba(0,0,0,0.7);
+  --shadow-luxury: 0 24px 50px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(224, 168, 92, 0.22);
+  --shadow-gold: 0 12px 32px -8px rgba(224, 140, 56, 0.5);
 }
 
 /* ---------- Reset & Base ---------- */
@@ -87,13 +87,13 @@ button { cursor: pointer; }
 /* ---------- Layout Utilitários ---------- */
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 2rem; }
 .section { padding: clamp(5.5rem, 10vw, 9rem) 0; position: relative; background: var(--paper); color: var(--text); }
-.section--ink { background: #050608; color: var(--text); }
+.section--ink { background: #090807; color: var(--text); }
 .section--ivory {
-  background: radial-gradient(circle at 50% 0%, rgba(212, 163, 96, 0.06) 0%, transparent 60%), #0A0D14;
+  background: radial-gradient(circle at 50% 0%, rgba(224, 140, 56, 0.08) 0%, transparent 60%), #120E0B;
   color: var(--text);
 }
 .section--simulator {
-  background: radial-gradient(circle at 50% 12%, rgba(212, 163, 96, 0.1) 0%, transparent 65%), #07090F;
+  background: radial-gradient(circle at 50% 12%, rgba(224, 140, 56, 0.12) 0%, transparent 65%), #0D0B08;
   color: var(--text);
   border-top: 1px solid var(--line-gold);
   border-bottom: 1px solid var(--line-gold);
@@ -199,7 +199,7 @@ button { cursor: pointer; }
 }
 .header::before {
   content: ''; position: absolute; inset: 0;
-  background: rgba(10, 18, 38, 0.86);
+  background: rgba(14, 11, 9, 0.92);
   backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%);
   border-bottom: 1px solid var(--line-gold);
   opacity: 0; transition: opacity 0.5s var(--ease);
@@ -218,21 +218,21 @@ button { cursor: pointer; }
 .nav {
   position: relative; display: flex; align-items: center; gap: 0.2rem; list-style: none;
   padding: 0.35rem 0.5rem; border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(224, 168, 92, 0.22);
+  background: rgba(24, 19, 15, 0.6);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
 }
 .nav li { position: relative; z-index: 1; }
 .nav a {
   display: block; padding: 0.6rem 1.05rem; border-radius: 999px; white-space: nowrap;
   font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78); transition: color 0.3s var(--ease);
+  color: rgba(250, 246, 242, 0.85); transition: color 0.3s var(--ease);
 }
 .nav a:hover, .nav a.is-active { color: #fff; }
 .nav a.nav__highlight { color: var(--gold-2); font-weight: 700; }
 .nav .nav__pill {
   position: absolute; z-index: 0; top: 0.35rem; bottom: 0.35rem; left: 0; width: 0;
-  border-radius: 999px; background: rgba(201, 165, 78, 0.18); border: 1px solid rgba(232, 201, 150, 0.5);
+  border-radius: 999px; background: rgba(224, 140, 56, 0.18); border: 1px solid rgba(245, 223, 192, 0.4);
   opacity: 0; pointer-events: none;
   transition: transform 0.5s var(--ease), width 0.5s var(--ease), opacity 0.3s;
 }
@@ -240,7 +240,7 @@ button { cursor: pointer; }
 .header__cta { justify-self: end; display: flex; align-items: center; gap: 1.2rem; }
 .header__phone {
   display: flex; align-items: center; gap: 0.55rem; white-space: nowrap;
-  font-size: 0.84rem; font-weight: 600; color: rgba(255, 255, 255, 0.88); transition: color 0.3s;
+  font-size: 0.84rem; font-weight: 600; color: rgba(250, 246, 242, 0.9); transition: color 0.3s;
 }
 .header__phone svg { width: 16px; height: 16px; color: var(--gold-2); }
 .header__phone:hover { color: var(--gold-2); }
@@ -269,13 +269,13 @@ button { cursor: pointer; }
 .hero__overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
-    radial-gradient(ellipse at 80% 20%, rgba(201, 165, 78, 0.15), transparent 50%),
-    linear-gradient(180deg, rgba(10,18,38,0.82) 0%, rgba(10,18,38,0.4) 35%, rgba(10,18,38,0.92) 80%, var(--ink) 100%),
-    linear-gradient(90deg, rgba(10,18,38,0.92) 0%, rgba(10,18,38,0.3) 70%);
+    radial-gradient(ellipse at 80% 20%, rgba(224, 140, 56, 0.18), transparent 50%),
+    linear-gradient(180deg, rgba(9,8,7,0.85) 0%, rgba(9,8,7,0.45) 35%, rgba(9,8,7,0.95) 80%, var(--ink) 100%),
+    linear-gradient(90deg, rgba(9,8,7,0.92) 0%, rgba(9,8,7,0.3) 70%);
 }
 .hero__glow {
   position: absolute; width: 600px; height: 600px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 165, 78, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(224, 140, 56, 0.22) 0%, transparent 70%);
   top: 15%; left: 10%; z-index: 1; pointer-events: none; filter: blur(60px);
 }
 
